@@ -1,8 +1,9 @@
-"""LLM prompt helpers.
+"""LLM prompt helpers and optional OpenAI integration.
 
-No LLM calls or external API functionality are implemented yet.
+The default harness pipeline still uses simulated LLM output.
 """
 
+from app.llm.client import call_openai_model
 from app.llm.prompt_builder import build_prompt_package
 
-__all__ = ["build_prompt_package"]
+__all__ = ["build_prompt_package", "call_openai_model"]
